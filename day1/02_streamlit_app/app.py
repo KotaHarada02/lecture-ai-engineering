@@ -50,14 +50,14 @@ models = {
     config.MODEL_NAME2
 }
 selected_model = st.selectbox('モデルを選択してください:', models)
-model = models[selected_model]
+model = selected_model
 
 pipe = llm.load_model(model)
 
 # --- Streamlit アプリケーション ---
-st.title("🤖 Gemma 2 Chatbot with Feedback")
-st.write("Gemmaモデルを使用したチャットボットです。回答に対してフィードバックを行えます。")
-st.markdown("---")
+# st.title("🤖 Gemma 2 Chatbot with Feedback")
+# st.write("Gemmaモデルを使用したチャットボットです。回答に対してフィードバックを行えます。")
+# st.markdown("---")
 
 # --- サイドバー ---
 st.sidebar.title("ナビゲーション")
@@ -87,4 +87,4 @@ elif st.session_state.page == "サンプルデータ管理":
 
 # --- フッターなど（任意） ---
 st.sidebar.markdown("---")
-st.sidebar.info("開発者: [Your Name]")
+st.sidebar.info("開発者: [harada_techAND]")
