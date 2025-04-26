@@ -67,7 +67,7 @@ class LLMClient:
 # 使用例
 if __name__ == "__main__":
     # ngrok URLを設定（実際のURLに置き換えてください）
-    NGROK_URL = "https://c6c3-34-23-80-188.ngrok-free.app/"
+    NGROK_URL = "https://a814-35-196-164-95.ngrok-free.app/"
     
     # クライアントの初期化
     client = LLMClient(NGROK_URL)
@@ -84,4 +84,4 @@ if __name__ == "__main__":
     )
     print(f"Response: {result['generated_text']}")
     print(f"Model processing time: {result['response_time']:.2f}s")
-    print(f"Total request time: {result['total_request_time']:.2f}s")    
+    print(f"Total request time: {result['total_request_time']:.2f}s")
