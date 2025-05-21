@@ -2,7 +2,6 @@
 name: ML Pipeline CI
 
 on:
-on:
   push:
     branches: [main, develop2]
   pull_request:
