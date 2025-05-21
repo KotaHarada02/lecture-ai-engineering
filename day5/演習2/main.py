@@ -11,7 +11,7 @@ import pickle
 import time
 import great_expectations as gx
 
-
+                         
 class DataLoader:
     """データロードを行うクラス"""
 
@@ -22,7 +22,7 @@ class DataLoader:
             return pd.read_csv(path)
         else:
             # ローカルのファイル
-            local_path = "data/Titanic.csv"
+            local_path = "day5/演習2/data/Titanic.csv"
             if os.path.exists(local_path):
                 return pd.read_csv(local_path)
 
@@ -184,7 +184,7 @@ class ModelTester:
         return {"accuracy": accuracy, "inference_time": inference_time}
 
     @staticmethod
-    def save_model(model, path="models/titanic_model.pkl"):
+    def save_model(model, path="day5/演習2/models/titanic_model.pkl"):
         model_dir = "models"
         os.makedirs(model_dir, exist_ok=True)
         model_path = os.path.join(model_dir, f"titanic_model.pkl")
