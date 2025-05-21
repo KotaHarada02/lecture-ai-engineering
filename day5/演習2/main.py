@@ -237,7 +237,8 @@ def test_model_performance():
 
     # 評価
     metrics = ModelTester.evaluate_model(model, X_test, y_test)
-
+    print(f"精度: {metrics['accuracy']:.4f}(ベースライン:0.75)")
+    print(f"推論時間: {metrics['inference_time']:.4f}秒(基準時間:1.00s)")
     # ベースラインとの比較
     assert ModelTester.compare_with_baseline(
         metrics, 0.75
@@ -277,8 +278,8 @@ if __name__ == "__main__":
     model = ModelTester.train_model(X_train, y_train, model_params)
     metrics = ModelTester.evaluate_model(model, X_test, y_test)
 
-    print(f"精度: {metrics['accuracy']:.4f}")
-    print(f"推論時間: {metrics['inference_time']:.4f}秒")
+    print(f"精度: {metrics['accuracy']:.4f}(ベースライン:0.75)")
+    print(f"推論時間: {metrics['inference_time']:.4f}秒(基準時間:1.00s)")
 
     # モデル保存
     model_path = ModelTester.save_model(model)
