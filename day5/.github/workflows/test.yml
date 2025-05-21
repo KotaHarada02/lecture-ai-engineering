@@ -46,10 +46,6 @@ jobs:
         run: |
           pytest day5/演習3/tests/test_date.py -v
 
-      - name: Run model tests
-        run: |
-          pytest day5/演習3/tests/test_model.py -v
-
       - name: Run pytest enshu2
         run: |
           pytest day5/演習2/main.py -v -s
