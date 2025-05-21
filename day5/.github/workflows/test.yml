@@ -51,4 +51,5 @@ jobs:
           pytest day5/演習3/tests/test_model.py -v
 
       - name: Run pytest enshu2
+        run: |
           pytest day5/演習2/main.py -v -s
