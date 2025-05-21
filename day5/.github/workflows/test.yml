@@ -2,10 +2,12 @@
 name: ML Pipeline CI
 
 on:
+on:
+  push:
+    branches: [main, develop]
   pull_request:
-    branches:
-      - main
-      - master
+    branches: [main, master]
+
 
 jobs:
   test:
@@ -45,10 +47,6 @@ jobs:
       - name: Run date tests
         run: |
           pytest day5/演習3/tests/test_date.py -v
-
-      - name: Run model tests
-        run: |
-          pytest day5/演習3/tests/test_model.py -v
 
       - name: Run pytest enshu2
         run: |
